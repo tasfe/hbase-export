@@ -35,7 +35,6 @@ public class ExportBoot {
 	public void exportTables() {
 		logger.info("start to export tables");
 		List<TableMetadata> tableMetadataList = this.hbaseMetadata.getTableMetadataList();
-		
 		for (TableMetadata tableMetadata : tableMetadataList) {
 			logger.info("start to export table: " + tableMetadata.getTableName());
 			HBaseScanner scanner = new HBaseScanner(tableMetadata);
