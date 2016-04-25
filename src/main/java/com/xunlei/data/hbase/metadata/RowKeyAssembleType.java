@@ -7,7 +7,7 @@ package com.xunlei.data.hbase.metadata;
  * 
  * 多个String对象通过下划线拼接，存HBase：NEED_SPLIT
  * 
- * 有的是#开头(表示话题)，有的是*开头(表示是userID)，String类型，存HBase：DIFFERENT_START
+ * 有的是#开头，有的是*开头，String类型，存HBase：DIFFERENT_START
  * 
  * 两个long类型，转换为byte[8]，两个byte[8]拼接，则是byte[16]，然后byte[]类型之间存HBase: LENGTH_BYTE_TO_LONG
  * 

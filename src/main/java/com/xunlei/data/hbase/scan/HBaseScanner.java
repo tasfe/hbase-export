@@ -30,11 +30,11 @@ import com.xunlei.data.hbase.metadata.TableMetadata;
 
 /**
  * 
- * 核心类 读取配置文件，与HBase创建链接，获得ResultScanner对象； 
+ * 核心类 读取配置文件，与HBase创建链接，获得ResultScanner对象；
  * 
- * 遍历ResultScanner对象（相当于一个游标），获取每行的Result对象； 
+ * 遍历ResultScanner对象（相当于一个游标），获取每行的Result对象；
  * 
- * 从Result对象里面根据元数据去或者rowkey和各个column字段的值； 
+ * 从Result对象里面根据元数据去或者rowkey和各个column字段的值；
  * 
  * 将字段名字和值都put到RowData对象，一行一个RowData对象；
  * 
@@ -182,7 +182,8 @@ public class HBaseScanner {
 			// column
 			for (ColumnMetadata cloumnMetadata : cfMetadata.getColumnMetadataList()) {
 				// column-data
-				rowData.addKeyValue(cloumnMetadata.getColumnName(), ColumnTypeTransform.transform(cloumnMetadata.getColumnType(), result.getValue(cfMetadata.getColumnFamilyNameBytes(), cloumnMetadata.getColumnNameBytes())));
+				byte[] originalValue = result.getValue(cfMetadata.getColumnFamilyNameBytes(), cloumnMetadata.getColumnNameBytes());
+				rowData.addKeyValue(cloumnMetadata.getColumnName(), ColumnTypeTransform.transform(cloumnMetadata.getColumnType(), originalValue));
 				// column-timestamp
 				this.addColumnTimestamp(result, rowData, cfMetadata, cloumnMetadata);
 			}

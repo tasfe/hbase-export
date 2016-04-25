@@ -15,7 +15,8 @@ package com.xunlei.data.hbase.metadata;
 public enum DataType {
 
 	INT("int"), 
-	LONG("long"), 
+	LONG("long"),
+	SHORT("short"),
 	STRING("string"),
 	BYTE("byte");
 
@@ -38,8 +39,10 @@ public enum DataType {
 			return DataType.INT;
 		} else if ("long".equals(typeName)) {
 			return DataType.LONG;
-		} else if ("string".equals(typeName)){
+		} else if ("string".equals(typeName)) {
 			return DataType.STRING;
+		} else if ("short".equals(typeName)){
+			return DataType.SHORT;
 		} else {
 			return DataType.BYTE;
 		}
