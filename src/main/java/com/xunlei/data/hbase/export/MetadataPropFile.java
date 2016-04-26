@@ -17,7 +17,7 @@ public class MetadataPropFile {
 
 	private static final Logger logger = LoggerFactory.getLogger(MetadataPropFile.class);
 
-	public static final String METADATA_PROP_FILE_PATH = "/metadata.properties";
+	public static final String METADATA_PROP_FILE_PATH = "/metadata.json";
 
 	private StringBuffer jsonBuff;
 
