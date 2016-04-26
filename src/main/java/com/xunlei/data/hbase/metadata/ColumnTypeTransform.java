@@ -1,5 +1,6 @@
 package com.xunlei.data.hbase.metadata;
 
+import org.apache.commons.lang.ArrayUtils;
 import org.apache.hadoop.hbase.util.Bytes;
 
 /**
@@ -67,8 +68,20 @@ public class ColumnTypeTransform {
             case LENGTH_BYTE_TO_LONG:
                 if (originalValue.length != Bytes.SIZEOF_LONG * 2) {
                     // 不正常情况
-                    long v = Bytes.toLong(originalValue);
-                    value = String.valueOf(v);
+                    // 不正常情况一般组合是string+long,如果不足8位，则按照string处理
+                    if(originalValue.length<8){
+                        value = String.valueOf(originalValue);//或者直接处理成\\N
+                    }else {
+                        byte[] strArray = new byte[originalValue.length - 8];
+                        byte[] longArray = new byte[8];
+                        // 翻转，先把long弄出来，剩下的给string，然后两个数组再翻转，再组合相应类型
+                        ArrayUtils.reverse(originalValue);
+                        System.arraycopy(originalValue, 0, longArray, 0, 8);
+                        System.arraycopy(originalValue, 8, strArray, 0, strArray.length);
+                        ArrayUtils.reverse(longArray);
+                        ArrayUtils.reverse(strArray);
+                        value = ColumnTypeTransform.transform(DataType.STRING, strArray) + ColumnTypeTransform.transform(DataType.LONG, longArray);
+                    }
                 } else {
                     // 正常情况，两个long都换成byte[]
                     byte[] b1 = new byte[]{originalValue[0], originalValue[1], originalValue[2], originalValue[3], originalValue[4], originalValue[5], originalValue[6], originalValue[7]};
