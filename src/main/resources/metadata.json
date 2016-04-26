@@ -1,0 +1,396 @@
+{
+    "hbase_name": "hadoopcluster",
+    "tables": [
+        {
+            "table_name": "commitedfile",
+            "rowkey_type": "LONG",
+            "rowkey_assemble_type": "NO_ASSEMBLE",
+            "column_familys": [
+                {
+                    "column_family_name": "bs",
+                    "columns": [
+                        {
+                            "column_name": "videoId",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "gcid",
+                            "column_type": "STRING"
+                        },
+                        {
+                            "column_name": "publishType",
+                            "column_type": "SHORT"
+                        },
+                        {
+                            "column_name": "title",
+                            "column_type": "STRING"
+                        },
+                        {
+                            "column_name": "userId",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "createTime",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "uploadTime",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "size",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "hotNum",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "praiseNum",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "length",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "shareNum",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "spamNum",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "issueTime",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "playNum",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "rotatedId",
+                            "column_type": "STRING"
+                        },
+                        {
+                            "column_name": "uploadMethod",
+                            "column_type": "STRING"
+                        },
+                        {
+                            "column_name": "category1",
+                            "column_type": "SHORT"
+                        },
+                        {
+                            "column_name": "category2",
+                            "column_type": "SHORT"
+                        },
+                        {
+                            "column_name": "mimetype",
+                            "column_type": "STRING"
+                        },
+                        {
+                            "column_name": "source",
+                            "column_type": "STRING"
+                        },
+                        {
+                            "column_name": "auditTime",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "reApprovaled",
+                            "column_type": "SHORT"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "table_name": "auditedfile",
+            "rowkey_type": "LONG",
+            "rowkey_assemble_type": "NO_ASSEMBLE",
+            "column_familys": [
+                {
+                    "column_family_name": "bs",
+                    "columns": [
+                        {
+                            "column_name": "videoId",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "gcid",
+                            "column_type": "STRING"
+                        },
+                        {
+                            "column_name": "publishType",
+                            "column_type": "SHORT"
+                        },
+                        {
+                            "column_name": "title",
+                            "column_type": "STRING"
+                        },
+                        {
+                            "column_name": "userId",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "createTime",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "uploadTime",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "size",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "hotNum",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "praiseNum",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "length",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "shareNum",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "spamNum",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "issueTime",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "playNum",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "rotatedId",
+                            "column_type": "STRING"
+                        },
+                        {
+                            "column_name": "uploadMethod",
+                            "column_type": "STRING"
+                        },
+                        {
+                            "column_name": "category1",
+                            "column_type": "SHORT"
+                        },
+                        {
+                            "column_name": "category2",
+                            "column_type": "SHORT"
+                        },
+                        {
+                            "column_name": "mimetype",
+                            "column_type": "STRING"
+                        },
+                        {
+                            "column_name": "source",
+                            "column_type": "STRING"
+                        },
+                        {
+                            "column_name": "auditTime",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "reApprovaled",
+                            "column_type": "SHORT"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "table_name": "deniedfile",
+            "rowkey_type": "LONG",
+            "rowkey_assemble_type": "NO_ASSEMBLE",
+            "column_familys": [
+                {
+                    "column_family_name": "bs",
+                    "columns": [
+                        {
+                            "column_name": "videoId",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "gcid",
+                            "column_type": "STRING"
+                        },
+                        {
+                            "column_name": "publishType",
+                            "column_type": "SHORT"
+                        },
+                        {
+                            "column_name": "title",
+                            "column_type": "STRING"
+                        },
+                        {
+                            "column_name": "userId",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "createTime",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "uploadTime",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "size",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "hotNum",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "praiseNum",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "length",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "shareNum",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "spamNum",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "issueTime",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "playNum",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "rotatedId",
+                            "column_type": "STRING"
+                        },
+                        {
+                            "column_name": "uploadMethod",
+                            "column_type": "STRING"
+                        },
+                        {
+                            "column_name": "category1",
+                            "column_type": "SHORT"
+                        },
+                        {
+                            "column_name": "category2",
+                            "column_type": "SHORT"
+                        },
+                        {
+                            "column_name": "mimetype",
+                            "column_type": "STRING"
+                        },
+                        {
+                            "column_name": "source",
+                            "column_type": "STRING"
+                        },
+                        {
+                            "column_name": "auditTime",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "reApprovaled",
+                            "column_type": "SHORT"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "table_name": "oplog",
+            "rowkey_type": "LONG",
+            "rowkey_assemble_type": "NO_ASSEMBLE",
+            "column_familys": [
+                {
+                    "column_family_name": "bs",
+                    "columns": [
+                        {
+                            "column_name": "memo",
+                            "column_type": "STRING"
+                        },
+                        {
+                            "column_name": "reason",
+                            "column_type": "STRING"
+                        },
+                        {
+                            "column_name": "userId",
+                            "column_type": "LONG"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "table_name": "shortvideotag",
+            "rowkey_type": "STRING",
+            "rowkey_assemble_type": "NO_ASSEMBLE",
+            "column_familys": [
+                {
+                    "column_family_name": "bs",
+                    "columns": [
+                        {
+                            "column_name": "count",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "promotionStart",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "promotionStop",
+                            "column_type": "LONG"
+                        },
+                        {
+                            "column_name": "desc1",
+                            "column_type": "STRING"
+                        },
+                        {
+                            "column_name": "desc2",
+                            "column_type": "STRING"
+                        },
+                        {
+                            "column_name": "help",
+                            "column_type": "STRING"
+                        },
+                        {
+                            "column_name": "backgroundImage",
+                            "column_type": "STRING"
+                        }
+                    ]
+                }
+            ]
+        },{
+            "table_name": "fileindex",
+            "rowkey_type": "STRING",
+            "rowkey_assemble_type": "LENGTH_BYTE_TO_LONG",
+            "column_familys": [
+                {
+                    "column_family_name": "bs",
+                    "columns": [
+                        {
+                            "column_name": "filekey",
+                            "column_type": "LONG"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
