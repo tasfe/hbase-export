@@ -14,38 +14,44 @@ import com.alibaba.fastjson.annotation.JSONField;
  *
  */
 public class TableMetadata {
-	//table
+	// table
 	@JSONField(name = "table_name")
 	private String tableName;
 	@JSONField(serialize = false)
 	private TableName tableNameHBase;
-	
-	//rowkey
+
+	// rowkey
 	@JSONField(name = "rowkey_type")
 	private DataType rowKeyType;
 	@JSONField(name = "rowkey_assemble_type")
 	private RowKeyAssembleType rowKeyAssembleType;
-	//column-family
+
+	// capture type
+	@JSONField(name = "capture_type")
+	private CaptureType captureType;
+
+	// column-family
 	@JSONField(name = "column_familys")
 	private List<ColumnFamilyMetadata> columnFamilyMetadataList;
 
-	public TableMetadata(){
-		
+	public TableMetadata() {
+
 	}
-	
+
 	public TableMetadata(String tableName) {
-		this(tableName, DataType.STRING, RowKeyAssembleType.NO_ASSEMBLE);
+		this(tableName, DataType.STRING, RowKeyAssembleType.NO_ASSEMBLE, CaptureType.SNAPSHOT);
 	}
 
 	public TableMetadata(String tableName, String rowKeyType, String rowKeyAssembleType) {
-		this(tableName, DataType.parse(rowKeyType), RowKeyAssembleType.parse(rowKeyAssembleType));
+		this(tableName, DataType.parse(rowKeyType), RowKeyAssembleType.parse(rowKeyAssembleType), CaptureType.SNAPSHOT);
 	}
-	
-	public TableMetadata(String tableName, DataType rowKeyType, RowKeyAssembleType rowKeyAssembleType) {
+
+	public TableMetadata(String tableName, DataType rowKeyType, RowKeyAssembleType rowKeyAssembleType, CaptureType captureType) {
 		this.tableName = tableName;
 		this.tableNameHBase = TableName.valueOf(this.tableName);
 		this.rowKeyType = rowKeyType;
 		this.rowKeyAssembleType = rowKeyAssembleType;
+		this.captureType = captureType;
 		this.columnFamilyMetadataList = new ArrayList<ColumnFamilyMetadata>();
 	}
 
@@ -78,6 +84,14 @@ public class TableMetadata {
 		this.rowKeyAssembleType = rowKeyAssembleType;
 	}
 
+	public CaptureType getCaptureType() {
+		return captureType;
+	}
+
+	public void setCaptureType(CaptureType captureType) {
+		this.captureType = captureType;
+	}
+
 	public List<ColumnFamilyMetadata> getColumnFamilyMetadataList() {
 		return columnFamilyMetadataList;
 	}
@@ -89,5 +103,5 @@ public class TableMetadata {
 	public void addColumnFamilyMetadata(ColumnFamilyMetadata columnFamilyMetadata) {
 		this.columnFamilyMetadataList.add(columnFamilyMetadata);
 	}
-	
+
 }

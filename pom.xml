@@ -14,6 +14,24 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<properties>
+				<package.target>dev</package.target>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault><!--默认启用的是dev环境配置 -->
+			</activation>
+		</profile>
+		<profile>
+			<id>beta</id>
+			<properties>
+				<package.target>beta</package.target>
+			</properties>
+		</profile>
+	</profiles>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.hbase</groupId>
@@ -76,4 +94,6 @@
 			</plugin>
 		</plugins>
 	</build>
+
+
 </project>

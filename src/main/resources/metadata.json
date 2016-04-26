@@ -5,6 +5,7 @@
             "table_name": "commitedfile",
             "rowkey_type": "LONG",
             "rowkey_assemble_type": "NO_ASSEMBLE",
+			"capture_type": "SNAPSHOT",
             "column_familys": [
                 {
                     "column_family_name": "bs",
@@ -109,6 +110,7 @@
             "table_name": "auditedfile",
             "rowkey_type": "LONG",
             "rowkey_assemble_type": "NO_ASSEMBLE",
+			"capture_type": "SNAPSHOT",
             "column_familys": [
                 {
                     "column_family_name": "bs",
@@ -213,6 +215,7 @@
             "table_name": "deniedfile",
             "rowkey_type": "LONG",
             "rowkey_assemble_type": "NO_ASSEMBLE",
+			"capture_type": "SNAPSHOT",
             "column_familys": [
                 {
                     "column_family_name": "bs",
@@ -317,6 +320,7 @@
             "table_name": "oplog",
             "rowkey_type": "LONG",
             "rowkey_assemble_type": "NO_ASSEMBLE",
+            "capture_type": "INCREMENT",
             "column_familys": [
                 {
                     "column_family_name": "bs",
@@ -341,6 +345,7 @@
             "table_name": "shortvideotag",
             "rowkey_type": "STRING",
             "rowkey_assemble_type": "NO_ASSEMBLE",
+			"capture_type": "SNAPSHOT",
             "column_familys": [
                 {
                     "column_family_name": "bs",
@@ -380,6 +385,7 @@
             "table_name": "fileindex",
             "rowkey_type": "STRING",
             "rowkey_assemble_type": "LENGTH_BYTE_TO_LONG",
+			"capture_type": "SNAPSHOT",
             "column_familys": [
                 {
                     "column_family_name": "bs",

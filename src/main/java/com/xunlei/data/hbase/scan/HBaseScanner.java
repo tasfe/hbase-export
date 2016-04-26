@@ -226,6 +226,13 @@ public class HBaseScanner {
 		for (ColumnFamilyMetadata cfMetadata : cfMetadataList) {
 			scan.addFamily(cfMetadata.getColumnFamilyNameBytes());
 		}
+		// 设置获取类型（增量or快照）
+		try {
+			ScanCaptureTypeSetter.scanIncrement(scan, this.tableMetadata);
+		} catch (IOException e1) {
+			logger.error(String.format("table[%s] set capture type error", this.tableMetadata.getTableName()), e1);
+		}
+
 		ResultScanner resultScanner = null;
 		try {
 			resultScanner = table.getScanner(scan);
