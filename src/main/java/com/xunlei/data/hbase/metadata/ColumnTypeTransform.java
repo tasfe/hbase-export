@@ -66,7 +66,7 @@ public class ColumnTypeTransform {
                 value = ColumnTypeTransform.transform(columnType, originalValue);
                 break;
             case LENGTH_BYTE_TO_LONG:
-                if (originalValue.length != Bytes.SIZEOF_LONG * 2) {
+                if (originalValue[0]=='t') {
                     // 不正常情况
                     // 不正常情况一般组合是string+long,如果不足8位，则按照string处理
                     if(originalValue.length<8){
