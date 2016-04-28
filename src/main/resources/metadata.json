@@ -318,13 +318,17 @@
         },
         {
             "table_name": "oplog",
-            "rowkey_type": "LONG",
+            "rowkey_type": "STRING",
             "rowkey_assemble_type": "NO_ASSEMBLE",
             "capture_type": "INCREMENT",
             "column_familys": [
                 {
                     "column_family_name": "bs",
                     "columns": [
+                        {
+                            "column_name": "ctime",
+                            "column_type": "LONG"
+                        },
                         {
                             "column_name": "memo",
                             "column_type": "STRING"
@@ -391,7 +395,7 @@
                     "column_family_name": "bs",
                     "columns": [
                         {
-                            "column_name": "filekey",
+                            "column_name": "fileKey",
                             "column_type": "LONG"
                         }
                     ]
