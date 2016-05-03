@@ -89,7 +89,7 @@ public class ColumnTypeTransform {
                         value = String.valueOf(v);
                     }else {
                         // 正常情况，两个long都换成byte[]
-                        byte[] b1 = new byte[]{originalValue[0], originalValue[1], originalValue[2], originalValue[3], originalValue[4], originalValue[5], originalValue[6], originalValue[7]};
+                        byte[] b1 = new byte[]{originalValue[7], originalValue[6], originalValue[5], originalValue[4], originalValue[3], originalValue[2], originalValue[1], originalValue[0]};
                         byte[] b2 = new byte[]{originalValue[8], originalValue[9], originalValue[10], originalValue[11], originalValue[12], originalValue[13], originalValue[14], originalValue[15]};
                         value = ColumnTypeTransform.transform(DataType.LONG, b1) + "_" + ColumnTypeTransform.transform(DataType.LONG, b2);
                     }
