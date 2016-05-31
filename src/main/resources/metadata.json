@@ -496,19 +496,7 @@
 			"column_family_name": "comment",
 			"columns": [{
 				"column_name": "id",
-				{
-					"appId": 3//应用id,
-					"typeId": 1//类型id,
-					1: 短视频,
-					"tid": "4b53da8949d92570ce0926d6bf711d58014436b1"//资源id,
-					"cid": 9196522404330863615//评论id,
-					"ip": "192.168.226.88"//作者ip,
-					"po": ""//所在省份,
-					"ci"//所在城市: "",
-					"time": 1464176961600//发布时间,
-					"device": "unknown"//评论设备,
-					"sourceId": "26849463040476160"//来源编号
-				}"column_type": "STRING"
+				"column_type": "STRING"
 			},
 			{
 				"column_name": "user",
