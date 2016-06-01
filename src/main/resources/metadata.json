@@ -524,5 +524,81 @@
 			},
 			]
 		}]
+	},
+	{
+		"table_name": "commentReview",
+		"rowkey_type": "LONG",
+		"rowkey_assemble_type": "NO_ASSEMBLE",
+		"capture_type": "SNAPSHOT",
+		"column_familys": [{
+			"column_family_name": "comment",
+			"columns": [{
+				"column_name": "id",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "user",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "ext",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "count",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "content",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "checker",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "checkTime",
+                "column_type": "LONG"
+			},
+			]
+		}]
+	},
+	{
+		"table_name": "commentNoPass",
+		"rowkey_type": "LONG",
+		"rowkey_assemble_type": "NO_ASSEMBLE",
+		"capture_type": "SNAPSHOT",
+		"column_familys": [{
+			"column_family_name": "comment",
+			"columns": [{
+				"column_name": "id",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "user",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "ext",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "count",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "content",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "checker",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "checkTime",
+                "column_type": "LONG"
+			},
+			]
+		}]
 	}]
 }
