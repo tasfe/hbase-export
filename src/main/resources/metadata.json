@@ -521,8 +521,7 @@
 			{
 				"column_name": "checkTime",
                 "column_type": "LONG"
-			},
-			]
+			}]
 		}]
 	},
 	{
@@ -559,8 +558,7 @@
 			{
 				"column_name": "checkTime",
                 "column_type": "LONG"
-			},
-			]
+			}]
 		}]
 	},
 	{
@@ -597,8 +595,20 @@
 			{
 				"column_name": "checkTime",
                 "column_type": "LONG"
-			},
-			]
+			}]
+		}]
+	},
+	{
+		"table_name": "usertag",
+		"rowkey_type": "LONG",
+		"rowkey_assemble_type": "LENGTH_BYTE_TO_LONG",
+		"capture_type": "SNAPSHOT",
+		"column_familys": [{
+			"column_family_name": "bs",
+			"columns": [{
+				"column_name": "tag",
+				"column_type": "STRING"
+			}]
 		}]
 	}]
 }
