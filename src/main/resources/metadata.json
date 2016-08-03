@@ -610,5 +610,103 @@
 				"column_type": "STRING"
 			}]
 		}]
+	},
+	{
+		"table_name": "userpoint",
+		"rowkey_type": "LONG",
+		"rowkey_assemble_type": "LENGTH_BYTE_TO_LONG",
+		"capture_type": "INCREMENT",
+		"column_familys": [{
+			"column_family_name": "bs",
+			"columns": [{
+				"column_name": "type",
+				"column_type": "STRING"
+			},
+            {
+				"column_name": "balance",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "createTime",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "memo",
+				"column_type": "STRING"
+			},
+            {
+				"column_name": "point",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "userid",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "source",
+				"column_type": "STRING"
+			}]
+		}]
+	},
+	{
+		"table_name": "userinfo",
+		"rowkey_type": "LONG",
+		"rowkey_assemble_type": "NO_ASSEMBLE",
+		"capture_type": "SNAPSHOT",
+		"column_familys": [{
+			"column_family_name": "bs",
+			"columns": [{
+				"column_name": "userName",
+				"column_type": "STRING"
+			},
+            {
+				"column_name": "headIconUrl",
+				"column_type": "STRING"
+			},
+            {
+				"column_name": "createTime",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "sex",
+				"column_type": "STRING"
+			},
+            {
+				"column_name": "messageCount",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "newMessageCount",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "followedTagCount",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "videoCount",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "userFollowCount",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "userFansCount",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "userPrasieCount",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "point",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "isFollowed",
+				"column_type": "STRING"
+			}]
+		}]
 	}]
 }
