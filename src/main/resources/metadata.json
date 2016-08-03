@@ -660,18 +660,6 @@
 				"column_type": "STRING"
 			},
             {
-				"column_name": "headIconUrl",
-				"column_type": "STRING"
-			},
-            {
-				"column_name": "createTime",
-				"column_type": "LONG"
-			},
-            {
-				"column_name": "sex",
-				"column_type": "STRING"
-			},
-            {
 				"column_name": "messageCount",
 				"column_type": "LONG"
 			},
@@ -702,10 +690,6 @@
             {
 				"column_name": "point",
 				"column_type": "LONG"
-			},
-            {
-				"column_name": "isFollowed",
-				"column_type": "STRING"
 			}]
 		}]
 	}]
