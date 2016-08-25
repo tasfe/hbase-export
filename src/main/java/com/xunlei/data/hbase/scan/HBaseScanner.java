@@ -260,8 +260,8 @@ public class HBaseScanner {
 		Connection conn = null;
 		try {
 			conn = ConnectionFactory.createConnection(HBASE_CONF);
-		} catch (IOException e) {
-			logger.error("create connection with hbase error", e);
+		} catch (Exception e) {
+			logger.error("create connection with hbase error: " + e.getMessage(), e);
 		}
 		return conn;
 	}
