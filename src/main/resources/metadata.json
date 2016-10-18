@@ -740,5 +740,22 @@
                 "column_type": "LONG"
             }]
 		}]
+	},
+	{
+		"table_name": "mfile",
+		"rowkey_type": "LONG",
+		"rowkey_assemble_type": "NO_ASSEMBLE",
+		"capture_type": "INCREMENT",
+		"column_familys": [{
+			"column_family_name": "bs",
+			"columns": [{
+				"column_name": "gcid",
+				"column_type": "STRING"
+			},
+            {
+				"column_name": "uploadTime",
+				"column_type": "LONG"
+			}]
+		}]
 	}]
 }
