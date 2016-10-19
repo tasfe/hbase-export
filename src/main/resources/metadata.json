@@ -5,7 +5,7 @@
 		"table_name": "mifile",
 		"rowkey_type": "LONG",
 		"rowkey_assemble_type": "NO_ASSEMBLE",
-		"capture_type": "INCREMENT",
+		"capture_type": "SNAPSHOT",
 		"column_familys": [{
 			"column_family_name": "bs",
 			"columns": [{
