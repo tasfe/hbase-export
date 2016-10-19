@@ -742,7 +742,7 @@
 		}]
 	},
 	{
-		"table_name": "mfile",
+		"table_name": "mifile",
 		"rowkey_type": "LONG",
 		"rowkey_assemble_type": "NO_ASSEMBLE",
 		"capture_type": "SNAPSHOT",
