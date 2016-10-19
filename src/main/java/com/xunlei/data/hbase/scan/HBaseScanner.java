@@ -188,8 +188,6 @@ public class HBaseScanner {
 				this.addColumnTimestamp(result, rowData, cfMetadata, cloumnMetadata);
 			}
 		}
-
-		logger.debug("-----: " + rowData.toJson());
 		
 		return rowData;
 	}
