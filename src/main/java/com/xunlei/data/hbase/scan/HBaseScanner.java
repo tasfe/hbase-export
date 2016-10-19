@@ -189,6 +189,8 @@ public class HBaseScanner {
 			}
 		}
 
+		logger.debug("-----: " + rowData.toJson());
+		
 		return rowData;
 	}
 

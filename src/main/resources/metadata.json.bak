@@ -1,0 +1,761 @@
+{
+	"hbase_name": "hadoopcluster",
+	"tables": [{
+		"table_name": "commitedfile",
+		"rowkey_type": "LONG",
+		"rowkey_assemble_type": "NO_ASSEMBLE",
+		"capture_type": "SNAPSHOT",
+		"column_familys": [{
+			"column_family_name": "bs",
+			"columns": [{
+				"column_name": "videoId",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "gcid",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "publishType",
+				"column_type": "SHORT"
+			},
+			{
+				"column_name": "title",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "userId",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "createTime",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "uploadTime",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "size",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "hotNum",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "praiseNum",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "length",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "shareNum",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "spamNum",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "issueTime",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "playNum",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "rotatedId",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "uploadMethod",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "category1",
+				"column_type": "SHORT"
+			},
+			{
+				"column_name": "category2",
+				"column_type": "SHORT"
+			},
+			{
+				"column_name": "mimetype",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "source",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "auditTime",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "reApprovaled",
+				"column_type": "SHORT"
+			},
+			{
+				"column_name": "width",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "heigth",
+				"column_type": "LONG"
+			},
+            {
+                "column_name": "videoType",
+                "column_type": "STRING"
+            }]
+		}]
+	},
+	{
+		"table_name": "auditedfile",
+		"rowkey_type": "LONG",
+		"rowkey_assemble_type": "NO_ASSEMBLE",
+		"capture_type": "SNAPSHOT",
+		"column_familys": [{
+			"column_family_name": "bs",
+			"columns": [{
+				"column_name": "videoId",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "gcid",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "publishType",
+				"column_type": "SHORT"
+			},
+			{
+				"column_name": "title",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "userId",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "createTime",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "uploadTime",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "size",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "hotNum",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "praiseNum",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "length",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "shareNum",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "spamNum",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "issueTime",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "playNum",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "rotatedId",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "uploadMethod",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "category1",
+				"column_type": "SHORT"
+			},
+			{
+				"column_name": "category2",
+				"column_type": "SHORT"
+			},
+			{
+				"column_name": "mimetype",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "source",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "auditTime",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "reApprovaled",
+				"column_type": "SHORT"
+			},
+			{
+				"column_name": "width",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "heigth",
+				"column_type": "LONG"
+			},
+            {
+                "column_name": "videoType",
+                "column_type": "STRING"
+            }]
+		}]
+	},
+	{
+		"table_name": "deniedfile",
+		"rowkey_type": "LONG",
+		"rowkey_assemble_type": "NO_ASSEMBLE",
+		"capture_type": "SNAPSHOT",
+		"column_familys": [{
+			"column_family_name": "bs",
+			"columns": [{
+				"column_name": "videoId",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "gcid",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "publishType",
+				"column_type": "SHORT"
+			},
+			{
+				"column_name": "title",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "userId",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "createTime",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "uploadTime",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "size",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "hotNum",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "praiseNum",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "length",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "shareNum",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "spamNum",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "issueTime",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "playNum",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "rotatedId",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "uploadMethod",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "category1",
+				"column_type": "SHORT"
+			},
+			{
+				"column_name": "category2",
+				"column_type": "SHORT"
+			},
+			{
+				"column_name": "mimetype",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "source",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "auditTime",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "reApprovaled",
+				"column_type": "SHORT"
+			},
+			{
+				"column_name": "width",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "heigth",
+				"column_type": "LONG"
+			},
+            {
+                "column_name": "videoType",
+                "column_type": "STRING"
+            }]
+		}]
+	},
+	{
+		"table_name": "oplog",
+		"rowkey_type": "STRING",
+		"rowkey_assemble_type": "NO_ASSEMBLE",
+		"capture_type": "INCREMENT",
+		"column_familys": [{
+			"column_family_name": "bs",
+			"columns": [{
+				"column_name": "ctime",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "memo",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "reason",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "userId",
+				"column_type": "LONG"
+			}]
+		}]
+	},
+	{
+		"table_name": "shortvideotag",
+		"rowkey_type": "STRING",
+		"rowkey_assemble_type": "NO_ASSEMBLE",
+		"capture_type": "SNAPSHOT",
+		"column_familys": [{
+			"column_family_name": "bs",
+			"columns": [{
+				"column_name": "count",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "promotionStart",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "promotionStop",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "desc1",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "desc2",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "help",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "backgroundImage",
+				"column_type": "STRING"
+			}]
+		}]
+	},
+	{
+		"table_name": "fileindex",
+		"rowkey_type": "STRING",
+		"rowkey_assemble_type": "LENGTH_BYTE_TO_LONG",
+		"capture_type": "SNAPSHOT",
+		"column_familys": [{
+			"column_family_name": "bs",
+			"columns": [{
+				"column_name": "fileKey",
+				"column_type": "LONG"
+			}]
+		}]
+	},
+	{
+		"table_name": "file",
+		"rowkey_type": "STRING",
+		"rowkey_assemble_type": "NO_ASSEMBLE",
+		"capture_type": "SNAPSHOT",
+		"column_familys": [{
+			"column_family_name": "bs",
+			"columns": [{
+				"column_name": "totalCount",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "commitCount",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "size",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "path",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "ip",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "createTime",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "uploadTime",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "commitTime",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "status",
+				"column_type": "SHORT"
+			},
+			{
+				"column_name": "title",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "downloadNum",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "praiseNum",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "length",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "shareNum",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "spamNum",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "commitedkey",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "issueTime",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "playNum",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "rotatedId",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "uploadMethod",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "category1",
+				"column_type": "SHORT"
+			},
+			{
+				"column_name": "category2",
+				"column_type": "SHORT"
+			},
+			{
+				"column_name": "mimetype",
+				"column_type": "SHORT"
+			},
+			{
+				"column_name": "source",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "reApprovaled",
+				"column_type": "SHORT"
+			},
+			{
+				"column_name": "width",
+				"column_type": "LONG"
+			},
+			{
+				"column_name": "heigth",
+				"column_type": "LONG"
+			}]
+		}]
+	},
+	{
+		"table_name": "commentPass",
+		"rowkey_type": "LONG",
+		"rowkey_assemble_type": "NO_ASSEMBLE",
+		"capture_type": "SNAPSHOT",
+		"column_familys": [{
+			"column_family_name": "comment",
+			"columns": [{
+				"column_name": "id",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "user",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "ext",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "count",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "content",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "checker",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "checkTime",
+                "column_type": "LONG"
+			}]
+		}]
+	},
+	{
+		"table_name": "commentReview",
+		"rowkey_type": "LONG",
+		"rowkey_assemble_type": "NO_ASSEMBLE",
+		"capture_type": "SNAPSHOT",
+		"column_familys": [{
+			"column_family_name": "comment",
+			"columns": [{
+				"column_name": "id",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "user",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "ext",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "count",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "content",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "checker",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "checkTime",
+                "column_type": "LONG"
+			}]
+		}]
+	},
+	{
+		"table_name": "commentNoPass",
+		"rowkey_type": "LONG",
+		"rowkey_assemble_type": "NO_ASSEMBLE",
+		"capture_type": "SNAPSHOT",
+		"column_familys": [{
+			"column_family_name": "comment",
+			"columns": [{
+				"column_name": "id",
+				"column_type": "STRING"
+			},
+			{
+				"column_name": "user",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "ext",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "count",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "content",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "checker",
+                "column_type": "STRING"
+			},
+			{
+				"column_name": "checkTime",
+                "column_type": "LONG"
+			}]
+		}]
+	},
+	{
+		"table_name": "usertag",
+		"rowkey_type": "LONG",
+		"rowkey_assemble_type": "LENGTH_BYTE_TO_LONG",
+		"capture_type": "SNAPSHOT",
+		"column_familys": [{
+			"column_family_name": "bs",
+			"columns": [{
+				"column_name": "tag",
+				"column_type": "STRING"
+			}]
+		}]
+	},
+	{
+		"table_name": "userpoint",
+		"rowkey_type": "LONG",
+		"rowkey_assemble_type": "LENGTH_BYTE_TO_LONG",
+		"capture_type": "INCREMENT",
+		"column_familys": [{
+			"column_family_name": "bs",
+			"columns": [{
+				"column_name": "type",
+				"column_type": "INT"
+			},
+            {
+				"column_name": "balance",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "createTime",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "memo",
+				"column_type": "STRING"
+			},
+            {
+				"column_name": "point",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "userId",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "source",
+				"column_type": "STRING"
+			}]
+		}]
+	},
+	{
+		"table_name": "userinfo",
+		"rowkey_type": "LONG",
+		"rowkey_assemble_type": "NO_ASSEMBLE",
+		"capture_type": "SNAPSHOT",
+		"column_familys": [{
+			"column_family_name": "bs",
+			"columns": [{
+				"column_name": "userName",
+				"column_type": "STRING"
+			},
+            {
+				"column_name": "messageCount",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "newMessageCount",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "followedTagCount",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "videoCount",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "userFollowCount",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "userFansCount",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "userPrasieCount",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "point",
+				"column_type": "LONG"
+			},
+            {
+                "column_name": "auditedVideoCount",
+                "column_type": "LONG"
+            }]
+		}]
+	},
+	{
+		"table_name": "mfile",
+		"rowkey_type": "LONG",
+		"rowkey_assemble_type": "NO_ASSEMBLE",
+		"capture_type": "INCREMENT",
+		"column_familys": [{
+			"column_family_name": "bs",
+			"columns": [{
+				"column_name": "gcid",
+				"column_type": "STRING"
+			},
+            {
+				"column_name": "uploadTime",
+				"column_type": "LONG"
+			}]
+		}]
+	}]
+}
