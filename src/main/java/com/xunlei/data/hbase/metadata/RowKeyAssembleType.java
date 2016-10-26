@@ -19,7 +19,8 @@ public enum RowKeyAssembleType {
 	NO_ASSEMBLE("no_assemble"), 
 	NEED_SPLIT("need_split"), 
 	DIFFERENT_START("different_start"), 
-	LENGTH_BYTE_TO_LONG("length_byte_to_long");
+	LENGTH_BYTE_TO_LONG("length_byte_to_long"), 
+	ARRAY_REVERSE("need_reverse");
 
 	private String typeName;
 
@@ -42,6 +43,8 @@ public enum RowKeyAssembleType {
 			return RowKeyAssembleType.NEED_SPLIT;
 		} else if ("different_start".equals(typeName)) {
 			return RowKeyAssembleType.DIFFERENT_START;
+		} else if ("need_reverse".equals(typeName)) {
+			return RowKeyAssembleType.ARRAY_REVERSE;
 		} else {
 			return RowKeyAssembleType.LENGTH_BYTE_TO_LONG;
 		}
