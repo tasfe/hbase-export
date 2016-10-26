@@ -101,6 +101,7 @@ public class ColumnTypeTransform {
 			 */
 			ArrayUtils.reverse(originalValue);
 			value = ColumnTypeTransform.transform(DataType.LONG, originalValue);
+			break;
 		default:
 			value = "";
 		}
