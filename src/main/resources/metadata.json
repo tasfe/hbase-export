@@ -340,10 +340,10 @@
 		}]
 	},
 	{
-		"table_name": "oplog",
+		"table_name": "oplog201611",
 		"rowkey_type": "STRING",
 		"rowkey_assemble_type": "NO_ASSEMBLE",
-		"capture_type": "INCREMENT",
+		"capture_type": "SNAPSHOT",
 		"column_familys": [{
 			"column_family_name": "bs",
 			"columns": [{
