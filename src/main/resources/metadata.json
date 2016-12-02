@@ -343,7 +343,7 @@
 		"table_name": "oplog201611",
 		"rowkey_type": "STRING",
 		"rowkey_assemble_type": "NO_ASSEMBLE",
-		"capture_type": "SNAPSHOT",
+		"capture_type": "INCREMENT",
 		"column_familys": [{
 			"column_family_name": "bs",
 			"columns": [{
