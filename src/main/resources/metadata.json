@@ -693,6 +693,43 @@
 		}]
 	},
 	{
+		"table_name": "userchip",
+		"rowkey_type": "LONG",
+		"rowkey_assemble_type": "LENGTH_BYTE_TO_LONG",
+		"capture_type": "INCREMENT",
+		"column_familys": [{
+			"column_family_name": "bs",
+			"columns": [{
+				"column_name": "type",
+				"column_type": "INT"
+			},
+            {
+				"column_name": "balance",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "createTime",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "memo",
+				"column_type": "STRING"
+			},
+            {
+				"column_name": "chip",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "userId",
+				"column_type": "LONG"
+			},
+            {
+				"column_name": "source",
+				"column_type": "STRING"
+			}]
+		}]
+	},
+	{
 		"table_name": "userinfo",
 		"rowkey_type": "LONG",
 		"rowkey_assemble_type": "ARRAY_REVERSE",
